@@ -1,212 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hamza Babar | Curriculum Vitae</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza Babar – Curriculum Vitae</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="cv.css">
+
 </head>
+
 <body>
 
-<!-- Print Button -->
-<button class="print-btn" onclick="window.print()" title="Print / Save as PDF">
-  <i class="fas fa-print"></i>
-</button>
+  <!-- Animated Cursor -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
 
-<div class="wrapper">
-
-  <!-- ── HERO ─────────────────────────────────────────────── -->
-  <header class="hero">
-    <div class="profile-wrap">
-      <div class="profile-ring"></div>
-      <img
-        src="images/profile.jpeg"
-        alt="Hamza Babar"
-        class="profile-img"
-        onerror="this.style.display='none'; document.getElementById('initials').style.display='flex';"
-      />
-      <div class="profile-placeholder" id="initials" style="display:none;">HB</div>
+  <!-- TOP NAVBAR -->
+  <nav class="topbar">
+    <div class="topbar-name">
+      <i class="fas fa-star-and-crescent" style="color:var(--accent-main);"></i>
+      Hamza Babar
     </div>
+    <div class="topbar-actions">
+      <button class="tb-btn" id="themeBtn" onclick="toggleTheme()">
+        <i class="fas fa-sun" id="themeIco"></i>
+        <span id="themeLbl">Light Mode</span>
+      </button>
+      <button class="tb-btn tb-print" onclick="window.print()">
+        <i class="fas fa-print"></i>
+        <span>Print</span>
+      </button>
+    </div>
+  </nav>
 
-    <div class="hero-info">
-      <div class="hero-name">Hamza Babar</div>
-      <div class="hero-father">Son of: <span>Muhammad Babar Zaman</span></div>
+  <div class="wrapper">
 
-      <div class="hero-title">
-        <i class="fas fa-star-and-crescent"></i>
-        Islamic Scholar & Graduate Student
+    <!-- ══ HERO ══════════════════════════════════════════════ -->
+    <header class="hero">
+      <div class="profile-wrap">
+        <div class="profile-ring"></div>
+        <img src="images/profile.jpeg" alt="Hamza Babar" class="profile-img"
+          onerror="this.style.display='none';document.getElementById('ph').style.display='flex';" />
+        <div class="profile-ph" id="ph" style="display:none;">HB</div>
       </div>
 
-      <div class="hero-contacts">
-        <a href="tel:03029010152" class="contact-chip">
-          <i class="fas fa-phone"></i> +92 302 9010152
-        </a>
-        <a href="mailto:ibnbabar48@gmail.com" class="contact-chip">
-          <i class="fas fa-envelope"></i> ibnbabar48@gmail.com
-        </a>
-        <span class="contact-chip">
-          <i class="fas fa-map-marker-alt"></i> Abbottabad, KPK
-        </span>
-      </div>
-    </div>
-  </header>
-
-  <!-- ── OBJECTIVE ─────────────────────────────────────────── -->
-  <section class="section">
-    <div class="section-title">
-      <i class="fas fa-bullseye"></i> Career Objective
-    </div>
-    <div class="objective-box">
-      <p>
-        A dedicated and knowledgeable Islamic scholar with a strong foundation in classical Islamic sciences through Dars-e-Nizami, complemented by a formal undergraduate degree in Islamic Studies. Seeking a platform to contribute meaningfully in Islamic education, research, and community service by combining traditional scholarship with contemporary academic learning.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── EDUCATION ─────────────────────────────────────────── -->
-  <section class="section">
-    <div class="section-title">
-      <i class="fas fa-graduation-cap"></i> Education
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">Dars-e-Nizami (Shahadah al-'Alamiyyah)</div>
-        <span class="card-badge">2019 – 2026</span>
-      </div>
-      <div class="card-sub"><i class="fas fa-mosque"></i> Dar ul-Uloom Karachi</div>
-      <div class="card-text">
-        Completed the comprehensive 8-year traditional Islamic curriculum (Dars-e-Nizami) covering Tafsir, Hadith, Fiqh, Usul al-Fiqh, Arabic Grammar & Literature, Logic, and Islamic Philosophy. Graduated from one of Pakistan's most prestigious and recognised Islamic institutions.
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">B.S. Islamic Studies (Undergraduate)</div>
-        <span class="card-badge blue">2022 – Present</span>
-      </div>
-      <div class="card-sub"><i class="fas fa-university"></i> Allama Iqbal Open University (AIOU) – Private</div>
-      <div class="card-text">
-        Currently enrolled in the 8-semester Bachelor of Science in Islamic Studies programme. Pursuing a parallel formal academic degree to integrate classical Islamic knowledge with modern scholarly research methodologies.
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SKILLS ─────────────────────────────────────────────── -->
-  <section class="section">
-    <div class="section-title">
-      <i class="fas fa-brain"></i> Core Skills
-    </div>
-
-    <div class="grid-2">
-      <div class="card" style="padding: 20px 22px;">
-        <div class="skill-item">
-          <div class="skill-label">Quranic Recitation & Tajweed <span>95%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
+      <div class="hero-info">
+        <div class="hero-name">Hamza Babar</div>
+        <div class="hero-father">
+          <i class="fas fa-user-tie" style="color:var(--accent-main);margin-right:5px;font-size:.8rem;"></i>
+          Son of: <span>Muhammad Babar Zaman</span>
         </div>
-        <div class="skill-item">
-          <div class="skill-label">Arabic Language & Literature <span>90%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
+        <div class="hero-badge">
+          <i class="fas fa-star-and-crescent"></i>
+          Islamic Scholar &amp; Graduate Student
         </div>
-        <div class="skill-item">
-          <div class="skill-label">Islamic Jurisprudence (Fiqh) <span>88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:88%;"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-label">Hadith Sciences <span>85%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div>
+        <div class="hero-contacts">
+          <a href="tel:03029010152" class="chip"><i class="fas fa-phone-alt"></i> +92 302 9010152</a>
+          <a href="mailto:ibnbabar48@gmail.com" class="chip"><i class="fas fa-envelope"></i> ibnbabar48@gmail.com</a>
+          <span class="chip"><i class="fas fa-map-marker-alt"></i> Abbottabad, KPK</span>
         </div>
       </div>
+    </header>
 
-      <div class="card" style="padding: 20px 22px;">
-        <div class="skill-item">
-          <div class="skill-label">Tafsir & Quranic Sciences <span>88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:88%;"></div></div>
+    <!-- ══ OBJECTIVE ════════════════════════════════════════ -->
+    <section class="sec">
+      <div class="sec-title">
+        <span class="ib"><i class="fas fa-bullseye"></i></span>
+        Career Objective
+      </div>
+      <div class="obj-box">
+        <i class="fas fa-quote-left qi"></i>
+        <p>
+          A dedicated and knowledgeable Islamic scholar with a strong foundation in classical Islamic sciences through
+          Dars-e-Nizami, complemented by a formal undergraduate degree in Islamic Studies. Seeking to contribute
+          meaningfully in Islamic education, research, and community service by combining traditional scholarship with
+          contemporary academic learning.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ EDUCATION ═════════════════════════════════════════ -->
+    <section class="sec">
+      <div class="sec-title">
+        <span class="ib"><i class="fas fa-graduation-cap"></i></span>
+        Education
+      </div>
+
+      <div class="cv-card">
+        <div class="ch">
+          <div class="ct">Dars-e-Nizami (Shahadah al-Alamiyyah)</div>
+          <span class="bo bo-o"><i class="fas fa-calendar-alt me-1"></i>2019 – 2026</span>
         </div>
-        <div class="skill-item">
-          <div class="skill-label">Islamic Research & Writing <span>80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:80%;"></div></div>
+        <div class="cs"><i class="fas fa-mosque"></i> Dar ul-Uloom Karachi</div>
+        <div class="cx">Completed the comprehensive 8-year traditional Islamic curriculum covering Tafsir, Hadith, Fiqh,
+          Usul al-Fiqh, Arabic Grammar &amp; Literature, Logic, and Islamic Philosophy. Graduated from one of Pakistan's
+          most prestigious and recognised Islamic institutions.</div>
+      </div>
+
+      <div class="cv-card">
+        <div class="ch">
+          <div class="ct">B.S. Islamic Studies (Undergraduate)</div>
+          <span class="bo bo-b"><i class="fas fa-spinner fa-spin me-1"></i>2022 – Present</span>
         </div>
-        <div class="skill-item">
-          <div class="skill-label">Public Speaking & Khutbah <span>82%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:82%;"></div></div>
+        <div class="cs"><i class="fas fa-university"></i> Allama Iqbal Open University (AIOU) – Private</div>
+        <div class="cx">Currently enrolled in the 8-semester Bachelor of Science in Islamic Studies programme. Pursuing
+          a parallel formal academic degree to integrate classical Islamic knowledge with modern scholarly research
+          methodologies.</div>
+      </div>
+    </section>
+
+    <!-- ══ SKILLS ════════════════════════════════════════════ -->
+    <section class="sec">
+      <div class="sec-title">
+        <span class="ib"><i class="fas fa-brain"></i></span>
+        Core Skills
+      </div>
+      <div class="g2">
+        <!-- Left -->
+        <div class="cv-card" style="padding:20px 22px;">
+          <div class="ski">
+            <div class="skl">
+              <span><i class="fas fa-quran" style="color:var(--accent-main);margin-right:6px;"></i> Quran &amp;
+                Tajweed</span>
+              <span class="p">95%</span>
+            </div>
+            <div class="sk-bar">
+              <div class="sk-fill" style="width:95%"></div>
+            </div>
+          </div>
+          <div class="ski">
+            <div class="skl">
+              <span><i class="fas fa-language" style="color:var(--accent-main);margin-right:6px;"></i> Arabic
+                Language</span>
+              <span class="p">90%</span>
+            </div>
+            <div class="sk-bar">
+              <div class="sk-fill" style="width:90%"></div>
+            </div>
+          </div>
+          <div class="ski">
+            <div class="skl">
+              <span><i class="fas fa-balance-scale" style="color:var(--accent-main);margin-right:6px;"></i> Fiqh
+                (Jurisprudence)</span>
+              <span class="p">88%</span>
+            </div>
+            <div class="sk-bar">
+              <div class="sk-fill" style="width:88%"></div>
+            </div>
+          </div>
+          <div class="ski">
+            <div class="skl">
+              <span><i class="fas fa-scroll" style="color:var(--accent-main);margin-right:6px;"></i> Hadith
+                Sciences</span>
+              <span class="p">85%</span>
+            </div>
+            <div class="sk-bar">
+              <div class="sk-fill" style="width:85%"></div>
+            </div>
+          </div>
         </div>
-        <div class="skill-item">
-          <div class="skill-label">Islamic Counselling <span>75%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:75%;"></div></div>
+        <!-- Right -->
+        <div class="cv-card" style="padding:20px 22px;">
+          <div class="ski">
+            <div class="skl">
+              <span><i class="fas fa-book-open" style="color:var(--accent-main);margin-right:6px;"></i> Tafsir &amp;
+                Quranic Sciences</span>
+              <span class="p">88%</span>
+            </div>
+            <div class="sk-bar">
+              <div class="sk-fill" style="width:88%"></div>
+            </div>
+          </div>
+          <div class="ski">
+            <div class="skl">
+              <span><i class="fas fa-pen-nib" style="color:var(--accent-main);margin-right:6px;"></i> Research &amp;
+                Writing</span>
+              <span class="p">80%</span>
+            </div>
+            <div class="sk-bar">
+              <div class="sk-fill" style="width:80%"></div>
+            </div>
+          </div>
+          <div class="ski">
+            <div class="skl">
+              <span><i class="fas fa-microphone" style="color:var(--accent-main);margin-right:6px;"></i> Khutbah &amp;
+                Speaking</span>
+              <span class="p">82%</span>
+            </div>
+            <div class="sk-bar">
+              <div class="sk-fill" style="width:82%"></div>
+            </div>
+          </div>
+          <div class="ski">
+            <div class="skl">
+              <span><i class="fas fa-hands-helping" style="color:var(--accent-main);margin-right:6px;"></i> Islamic
+                Counselling</span>
+              <span class="p">75%</span>
+            </div>
+            <div class="sk-bar">
+              <div class="sk-fill" style="width:75%"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── LANGUAGES ─────────────────────────────────────────── -->
-  <section class="section">
-    <div class="section-title">
-      <i class="fas fa-language"></i> Languages
-    </div>
-    <div class="lang-grid">
-      <div class="lang-card">
-        <div class="lang-icon">🕌</div>
-        <div class="lang-name">Arabic</div>
-        <div class="lang-level">Fluent – Classical & Modern</div>
+    <!-- ══ LANGUAGES ═════════════════════════════════════════ -->
+    <section class="sec">
+      <div class="sec-title">
+        <span class="ib"><i class="fas fa-language"></i></span>
+        Languages
       </div>
-      <div class="lang-card">
-        <div class="lang-icon">🇵🇰</div>
-        <div class="lang-name">Urdu</div>
-        <div class="lang-level">Native – Full Proficiency</div>
+      <div class="lang-row">
+        <div class="lang-c">
+          <div class="lang-ico"><i class="fas fa-star-and-crescent"></i></div>
+          <div class="lang-n">Arabic</div>
+          <div class="lang-lv">Fluent – Classical &amp; Modern</div>
+        </div>
+        <div class="lang-c">
+          <div class="lang-ico"><i class="fas fa-flag"></i></div>
+          <div class="lang-n">Urdu</div>
+          <div class="lang-lv">Native – Full Proficiency</div>
+        </div>
+        <div class="lang-c">
+          <div class="lang-ico"><i class="fas fa-globe"></i></div>
+          <div class="lang-n">English</div>
+          <div class="lang-lv">Basic – Elementary</div>
+        </div>
       </div>
-      <div class="lang-card">
-        <div class="lang-icon">🇬🇧</div>
-        <div class="lang-name">English</div>
-        <div class="lang-level">Basic – Elementary</div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── HOBBIES ────────────────────────────────────────────── -->
-  <section class="section">
-    <div class="section-title">
-      <i class="fas fa-heart"></i> Interests & Hobbies
-    </div>
-    <div class="hobbies-grid">
-      <span class="hobby-tag"><i class="fas fa-quran"></i> Quranic Recitation</span>
-      <span class="hobby-tag"><i class="fas fa-book-open"></i> Book Reading</span>
-      <span class="hobby-tag"><i class="fas fa-pen-nib"></i> Islamic Writing & Research</span>
-      <span class="hobby-tag"><i class="fas fa-mosque"></i> Islamic Lectures & Bayan</span>
-      <span class="hobby-tag"><i class="fas fa-star-and-crescent"></i> Hadith Study Circles</span>
-      <span class="hobby-tag"><i class="fas fa-hands-praying"></i> Community Service</span>
-    </div>
-  </section>
+    <!-- ══ HOBBIES ════════════════════════════════════════════ -->
+    <section class="sec">
+      <div class="sec-title">
+        <span class="ib"><i class="fas fa-heart"></i></span>
+        Interests &amp; Hobbies
+      </div>
+      <div class="hob-row">
+        <span class="hob-tag"><i class="fas fa-quran"></i> Quranic Recitation</span>
+        <span class="hob-tag"><i class="fas fa-book-open"></i> Book Reading</span>
+        <span class="hob-tag"><i class="fas fa-pen-fancy"></i> Islamic Writing</span>
+        <span class="hob-tag"><i class="fas fa-mosque"></i> Islamic Lectures</span>
+        <span class="hob-tag"><i class="fas fa-scroll"></i> Hadith Circles</span>
+        <span class="hob-tag"><i class="fas fa-hands-helping"></i> Community Service</span>
+        <span class="hob-tag"><i class="fas fa-keyboard"></i> Urdu Composing</span>
+      </div>
+    </section>
 
-  <!-- ── PERSONAL INFO ──────────────────────────────────────── -->
-  <section class="section">
-    <div class="section-title">
-      <i class="fas fa-id-card"></i> Personal Information
-    </div>
-    <div class="grid-2">
-      <div class="card" style="padding:16px 22px;">
-        <div class="card-sub"><i class="fas fa-user"></i> Full Name</div>
-        <div class="card-text">Hamza Babar</div>
+    <!-- ══ PERSONAL INFO ══════════════════════════════════════ -->
+    <section class="sec">
+      <div class="sec-title">
+        <span class="ib"><i class="fas fa-id-card"></i></span>
+        Personal Information
       </div>
-      <div class="card" style="padding:16px 22px;">
-        <div class="card-sub"><i class="fas fa-users"></i> Father's Name</div>
-        <div class="card-text">Muhammad Babar Zaman</div>
+      <div class="g2">
+        <div class="cv-card" style="padding:16px 22px;">
+          <div class="cs"><i class="fas fa-user"></i> Full Name</div>
+          <div class="cx">Hamza Babar</div>
+        </div>
+        <div class="cv-card" style="padding:16px 22px;">
+          <div class="cs"><i class="fas fa-user-tie"></i> Father's Name</div>
+          <div class="cx">Muhammad Babar Zaman</div>
+        </div>
+        <div class="cv-card" style="padding:16px 22px;">
+          <div class="cs"><i class="fas fa-map-marker-alt"></i> Address</div>
+          <div class="cx">Abbottabad, Khyber Pakhtunkhwa, Pakistan</div>
+        </div>
+        <div class="cv-card" style="padding:16px 22px;">
+          <div class="cs"><i class="fas fa-flag"></i> Nationality</div>
+          <div class="cx">Pakistani</div>
+        </div>
       </div>
-      <div class="card" style="padding:16px 22px;">
-        <div class="card-sub"><i class="fas fa-map-marker-alt"></i> Address</div>
-        <div class="card-text">Abbottabad, Khyber Pakhtunkhwa, Pakistan</div>
-      </div>
-      <div class="card" style="padding:16px 22px;">
-        <div class="card-sub"><i class="fas fa-flag"></i> Nationality</div>
-        <div class="card-text">Pakistani</div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-</div><!-- /wrapper -->
+    <!-- ══ DECLARATION ════════════════════════════════════════ -->
+    <!-- <section class="sec">
+      <div class="sec-title">
+        <span class="ib"><i class="fas fa-file-signature"></i></span>
+        Declaration
+      </div>
+      <div class="obj-box">
+        <i class="fas fa-quote-left qi"></i>
+        <p>
+          I hereby declare that all information provided above is true and accurate to the best of my knowledge and
+          belief. I take full responsibility for the correctness of the above details.
+        </p>
+      </div>
+      <div style="margin-top:20px;text-align:right;font-size:.86rem;color:var(--text-3);">
+        <span style="color:var(--text-2);font-weight:600;">Hamza Babar</span><br />
+        <span>Abbottabad, KPK</span>
+      </div>
+    </section> -->
 
-<script src="script.js"></script>
+  </div>
+
+
+  <script src="script.js"></script>
 </body>
+
 </html>
